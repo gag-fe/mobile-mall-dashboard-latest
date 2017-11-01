@@ -1,0 +1,114 @@
+#sales-analysis{
+  font-size: 28px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  display: flex;
+  background-color: #fff;
+  flex-direction: column;
+  .rc-select-selection--single {
+    height: 56px;
+    line-height: 56px;
+    cursor: pointer;
+    position: relative;
+  }
+  .rc-select-selection--single .rc-select-selection__rendered {
+    height: 56px;
+    line-height: 56px;
+    font-size: 24px;
+}
+.select-style{
+    width:100%;
+    height:56px;
+}
+.rc-select-arrow {
+    height: 56px;
+    position: absolute;
+    top: 2px;
+    right: 16px;
+    width: 0.2rem;
+    outline: none;
+}
+
+.rc-select-arrow b {
+    border-width: 10px 8px 8px;
+}
+.rc-select-open .rc-select-arrow b {
+    border-color: transparent transparent #888 transparent;
+    border-width: 0 8px 10px 8px;
+}
+.am-list-item.am-input-item{
+  flex: 2;
+  height: 50px;
+  margin: 0 20px;
+  border: 1px solid #DFDFDF;
+  border-radius: 50px;
+}
+.am-list-item{
+  min-height: 50px;
+}
+.am-list-item .am-input-control{
+  font-size: 24px;
+  input{
+      font-size: 24px;
+    }
+  }
+.am-list-footer{
+  padding:0;
+}
+.am-list-item.am-input-item:after {
+    content:none;
+}
+}
+//ListView样式与MallManage底部列表公用
+.row{
+    padding-left: 40px;
+    .row-title{
+      line-height:60px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size:28px;
+    }
+    .row-content{
+      display: flex;
+    }
+    .row-text-left{
+      flex:1;
+    }
+    .row-text-right{
+      padding-left: 40px;
+      flex:1;
+    }
+    .row-text-title{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 24px;
+      color: #666666;
+    }
+    .row-text-value{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 40px;
+      color: #FC6121;
+    }
+    .row-text-percent{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 24px;
+    }
+
+  }
+  #fixed-title{
+    width: 100%;
+    background-color: #fff;
+    padding-bottom: 10px;
+  }
+  .rc-select-dropdown{
+    font-size: 24px;
+  }

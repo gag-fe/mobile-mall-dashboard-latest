@@ -1,0 +1,49 @@
+.date-picker-show-value{
+    position: relative;
+    text-align: center;
+    line-height: 54px;
+    font-size: 28px;
+    height: 54px;
+}
+.date-picker-show-value::after{
+  content: '';
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #333;
+  position: absolute;
+  width: 100%;
+}
+.space{
+    display: inline-block;
+    height: 54px;
+    padding: 10px 10px 0 30px;
+    color:#7D7D7D;
+    font-size: 28px;
+}
+
+//以下是分段器样式
+.date-range-segment{
+  display:flex;
+  overflow: hidden;
+  padding-top: 5px;
+  min-height: 0.54rem;
+  .date-range-segment-item{
+    font-size: 28px;
+    flex:1;
+    text-align: center;
+  }
+  .date-range-segment-item-selected{
+    position: relative;
+    color:#FC6121 !important;
+  }
+  .date-range-segment-item-selected:after {
+    content: '';
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: #FC6121;
+    position: absolute;
+    width: 100%;
+   }
+}

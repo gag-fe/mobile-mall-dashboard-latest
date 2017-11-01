@@ -1,0 +1,101 @@
+.container-fill {
+  height: 100%;
+}
+.container-fill > .container-fill {
+  flex: 1 1 0;
+  position: relative;
+}
+
+/**
+ * Container Layout
+ * 1. create a flexible layout, either `column` or `row`
+ * 2. flex-column elements collapse horizontally, so we stretch them out again
+ */
+.container-column,
+.container-row {
+  display: flex;
+  max-height: 100%;
+  width: 100%;
+}
+.container-column > .container-fill,
+.container-row > .container-fill {
+  flex: 1 1 0;
+  position: relative;
+}
+
+.container-column {
+  flex-direction: column;
+}
+
+.container-row {
+  flex-direction: row;
+  height: auto;
+}
+.container-row > .container-fill {
+  height: auto;
+  width: auto;
+}
+
+.container-align-end {
+  align-items: flex-end;
+}
+
+.container-align-center {
+  align-items: center;
+}
+.container-direction-column > .container-align-center {
+  text-align: center;
+}
+
+.container-align-start {
+  align-items: flex-start;
+}
+
+.container-justified {
+  justify-content: space-around;
+}
+
+.container-justify-end {
+  justify-content: flex-end;
+}
+
+.container-justify-center {
+  justify-content: center;
+}
+
+.container-justify-start {
+  justify-content: flex-start;
+}
+
+.container-scrollable {
+  max-height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.container-scrollable:before, .container-scrollable:after {
+  content: "";
+  height: 1px;
+  position: absolute;
+  width: 1px;
+}
+.container-scrollable:before {
+  bottom: -1px;
+}
+.container-scrollable:after {
+  top: -1px;
+}
+.view-transition-fade-enter {
+  animation: moveFromRight .4s both;
+}
+
+.view-transition-fade-leave {
+   animation: moveToLeft .4s both;
+}
+
+@keyframes moveFromRight{
+    from { z-index: 1; transform: translateX(100%); }
+}
+@keyframes moveToLeft{
+    to { transform: translateX(-100%); }
+}
